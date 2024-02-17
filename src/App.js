@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 
 function App() {
   const mainCategories = ["Educational", "Inspirational", "Love"];
-  // const subCategories = ["Science", "Literature", "Art","Exercise", "Goals", "Money","Family", "Friends", "Animals"];
 
   const subCategories = {
     Educational: ["Science", "Literature", "Art"],
@@ -207,13 +206,13 @@ function App() {
           <h2>Subcategories for {selectedCategory}:</h2>
           {subCategories[selectedCategory].map((subCategory) => (
             <button key={subCategory}
-            onClick={() => setSelectedSub(subCategory)}>{subCategory}</button>
+            onClick={() => setSelectedSub(subCategory)}>
+              {subCategory}</button>
           ))}
           
-        </div>
-
-        
+        </div>        
       )}
+
       {selectedCategory === null ? (
           Quotes.Quotes.map((quoteObj, index) => (
             <div className='qCard' key={index}>
